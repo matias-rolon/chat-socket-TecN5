@@ -1,8 +1,17 @@
 .messages-container {
     display: flex;
     flex-direction: column-reverse;
-    overflow-y: auto;
-    max-height: 400px;
+    height: 250px;
+    overflow: auto;
+}
+
+.messages-container::-webkit-scrollbar {
+    width: 6px;
+}
+.messages-container::-webkit-scrollbar-thumb {
+    background-color: #bbb;
+    border-radius: 10px;
+
 }
 
 .message {
@@ -26,4 +35,3 @@
     color: #fff;
     align-self: flex-start;
 }
-

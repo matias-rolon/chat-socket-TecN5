@@ -1,17 +1,29 @@
+import React from 'react';
 import './styles/message.css'
 
-interface Props{
-    type: string;
+interface Message {
+    type: 'reciber' | 'sender';
     message: string;
-    user?: string;
-}
+  }
+  
+  interface MessagesProps {
+    messages: Message[];
+  }
+  
+  
 
-export const Messages = ({ message, type }: Props) => {
+export const Messages: React.FC<MessagesProps> = ({ messages }) => {
   return (
     <div className="messages-container">
-        <div className={`message ${type === 'sender' ? 'your-message' : 'other-message'}`}>
-            { message }
+        
+        {messages.map((message, index) => (
+        <div
+          key={index}
+          className={`message ${message.type === 'sender' ? 'your-message' : 'other-message'}`}>
+          {message.message}
         </div>
+      ))}
+      
     </div>
   )
 }

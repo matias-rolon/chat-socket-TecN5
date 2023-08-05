@@ -27,6 +27,9 @@
   width: 350px;
   height: 250px;
 }
+.chat::-webkit-scrollbar {
+  color: blue;
+}
 
 .content { 
     height: 60PX;
