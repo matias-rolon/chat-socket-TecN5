@@ -7,7 +7,7 @@
     background-color: #f2f5f8;
     height: 350px;
     width: 350px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6); /* Aquí ajustas los valores para obtener la sombra deseada */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
 }
 
 .label {
@@ -23,12 +23,12 @@
 }
 
 .chat{
+  position: relative;
   width: 350px;
   height: 250px;
 }
 
-.content {
-    
+.content { 
     height: 60PX;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -46,7 +46,6 @@
     width: 250px;
     padding: 5px;
     padding-right: 70px;
-    overflow-x: hidden;
     border: none;
     outline: none;
 }
@@ -60,7 +59,6 @@
     letter-spacing: 1px;
     border: none;
     color: #4A90E9;
-    transition: background .2s ease;
     cursor:pointer;
     &:hover {
       opacity: 0.5;
