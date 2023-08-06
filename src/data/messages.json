@@ -1,0 +1,30 @@
+[
+    {
+        "type": "reciber",
+        "message": "Hola, ¿cómo estás?"
+    },
+    {
+        "type": "sender",
+        "message": "Todo bien, gracias."
+    },
+    {
+        "type": "reciber",
+        "message": "¿Y tú qué tal?"
+    },
+    {
+        "type": "sender",
+        "message": "Estoy bien también, gracias por preguntar."
+    }, {
+        "type": "reciber",
+        "message": "Eso suena genial."
+    }, {
+        "type": "sender",
+        "message": "Hola, soy otra persona."
+    }, {
+        "type": "reciber",
+        "message": "Me alegra que estés bien."
+    }, {
+        "type": "sender",
+        "message": "¿Qué has estado haciendo?"
+    }
+]
