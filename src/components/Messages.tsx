@@ -1,8 +1,7 @@
-import React from 'react';
 import './styles/message.css'
 
 interface Message {
-    type: 'reciber' | 'sender';
+    type: string;
     message: string;
   }
   
@@ -12,7 +11,7 @@ interface Message {
   
   
 
-export const Messages: React.FC<MessagesProps> = ({ messages }) => {
+export const Messages = ({ messages }:MessagesProps) => {
   return (
     <div className="messages-container">
         
