@@ -1,6 +1,6 @@
 .messages-container {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     height: 250px;
     overflow: auto;
 }
@@ -11,7 +11,6 @@
 .messages-container::-webkit-scrollbar-thumb {
     background-color: #bbb;
     border-radius: 10px;
-
 }
 
 .message {
