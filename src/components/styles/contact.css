@@ -56,4 +56,10 @@
     display: flex;
     padding: 10px;
     color: #fff;
+    cursor:pointer;
+    transition: background-color 0.3s;
+}
+
+.contact:hover {
+    background-color: rgba(0, 0, 0, 0.5); /* Cambia el color de fondo al pasar el mouse por encima */
 }

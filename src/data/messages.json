@@ -1,30 +1,83 @@
 [
     {
-        "type": "reciber",
-        "message": "Hola, ¿cómo estás?"
+        "id": "1",
+        "messages": [
+            {
+                "message": "¡Hola! ¿Cómo estás?",
+                "type": "sender"
+            }, {
+                "message": "¡Hola! Estoy bien, gracias.",
+                "type": "receiver"
+            }
+        ]
     },
     {
-        "type": "sender",
-        "message": "Todo bien, gracias."
+        "id": "2",
+        "messages": [
+            {
+                "message": "¿Qué planes tienes para hoy?",
+                "type": "sender"
+            }, {
+                "message": "Nada en particular, ¿tú?",
+                "type": "receiver"
+            }
+        ]
     },
     {
-        "type": "reciber",
-        "message": "¿Y tú qué tal?"
+        "id": "3",
+        "messages": [
+            {
+                "message": "¡Feliz cumpleaños!",
+                "type": "receiver"
+            }, {
+                "message": "¡Gracias! 😄",
+                "type": "sender"
+            }
+        ]
     },
     {
-        "type": "sender",
-        "message": "Estoy bien también, gracias por preguntar."
+        "id": "4",
+        "messages": [
+            {
+                "message": "Te envié el archivo que necesitas.",
+                "type": "sender"
+            }, {
+                "message": "¡Perfecto! Gracias por tu ayuda.",
+                "type": "receiver"
+            }
+        ]
     }, {
-        "type": "reciber",
-        "message": "Eso suena genial."
+        "id": "5",
+        "messages": [
+            {
+                "message": "Oye, ¿puedes llamarme más tarde?",
+                "type": "receiver"
+            }, {
+                "message": "Claro, te llamaré esta tarde.",
+                "type": "sender"
+            }
+        ]
     }, {
-        "type": "sender",
-        "message": "Hola, soy otra persona."
+        "id": "6",
+        "messages": [
+            {
+                "message": "¿Vamos a cenar fuera esta noche?",
+                "type": "sender"
+            }, {
+                "message": "Sí, suena bien. ¿A qué hora?",
+                "type": "receiver"
+            }
+        ]
     }, {
-        "type": "reciber",
-        "message": "Me alegra que estés bien."
-    }, {
-        "type": "sender",
-        "message": "¿Qué has estado haciendo?"
+        "id": "7",
+        "messages": [
+            {
+                "message": "¡Hoy conseguí el trabajo que quería!",
+                "type": "receiver"
+            }, {
+                "message": "¡Eso es genial! ¡Felicidades!",
+                "type": "sender"
+            }
+        ]
     }
 ]

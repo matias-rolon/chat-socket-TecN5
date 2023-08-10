@@ -1,27 +1,39 @@
-import {Message} from "../interfaces/message";
+import { useContext } from "react";
+// import {Message} from "../interfaces/message";
 import './styles/message.css'
+import { ChatContext } from "../context/ChatContext";
 
 interface MessagesProps {
-    messages: Message[];
+    messages: {
+        id: string;
+        messages: {
+            message: string;
+            type: string;
+        }[];
+    }[]
 }
 
 
-export const Messages = ({messages} : MessagesProps) => {
+export const Messages = ( props : MessagesProps) => {
+
+    const {selectedContact} = useContext(ChatContext);
+
+    const selectedMessage = props.messages.find( item => item.id === selectedContact )    
+
     return (
         <div className="messages-container">
 
             {
-            messages.map(({message, type}, index) => (
+            selectedMessage?.messages.map(({message, type}, index) => (
                 <div key={index}
                     className={
-                        `message ${
-                            type === 'sender' ? 'your-message' : 'other-message'
-                        }`
-                }>
-                    {
-                    message
-                } </div>
+                        `message ${ type === 'sender' ? 'your-message' : 'other-message'}`
+                    }
+                >
+                    { message } 
+                </div>
             ))
-        } </div>
+        } 
+        </div>
     )
 }
