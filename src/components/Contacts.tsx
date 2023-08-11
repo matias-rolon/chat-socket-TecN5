@@ -1,22 +1,37 @@
+import { useContext } from "react";
+
 import { Contact } from "../interfaces/contact";
 import {useSearchFilter} from "../hooks/useSearchFilter";
 import noImage from "../assets/no-image.jpg";
+import { ChatContext } from "../context/ChatContext";
 
 import './styles/contact.css'
-import { useContext } from "react";
-import { ChatContext } from "../context/ChatContext";
 
 interface ContactsProps {
     contacts: Contact[];
 }
 
-export const Contacts = ({ contacts }: ContactsProps) => {
+interface InfoContactProps {
+    id: string;
+    name: string;
+    image: string;
+}
 
-    const { setSelectedContact, selectedContact } = useContext(ChatContext)
+
+
+export const Contacts = ({ contacts }: ContactsProps) => {
+    const { setSelectedContact, setInfoContact } = useContext(ChatContext)
+
+    const handleClick = ({ id, image, name }: InfoContactProps) => {
+        setSelectedContact(id);
+        setInfoContact({
+            image,
+            name
+        });
+    }
+   
 
     const { searchTerm, setSearchTerm, filteredItems } = useSearchFilter(contacts, "name");
-
-    console.log(selectedContact)
 
     return (
         <>
@@ -30,9 +45,8 @@ export const Contacts = ({ contacts }: ContactsProps) => {
                 />
             </div>
             <div className="contacts-container">
-                
                 {filteredItems.map(({ name, image, id }, index) => (
-                    <div key={index} className="contact" onClick={() => setSelectedContact(id)}>
+                    <div key={index} className="contact" onClick={() => handleClick({id, name, image})}>
                         <div className="image-container">
                             <img 
                                 src={`${image ? `${image}` : `${noImage}`}`} 

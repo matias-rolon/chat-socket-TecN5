@@ -1,0 +1,23 @@
+
+.contact-info {
+    background-color: #444753;
+    word-wrap: break-word;
+    align-items: center;
+    display: flex;
+    padding: 5px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.image-contact{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.image-contact img {
+    border-radius: 100%;
+    width: 100%;
+    height: auto;
+}

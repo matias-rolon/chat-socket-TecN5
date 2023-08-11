@@ -6,11 +6,18 @@ interface Props {
 }
 
 export const ChatProvider = ({children}: Props ) => {
+  const [infoContact, setInfoContact] = useState({ 
+    name: "Hola",
+    image: "https"
+   })
   const [selectedContact, setSelectedContact] = useState('');
     
   return (
     <ChatContext.Provider value={{ 
         selectedContact,
+        infoContact,
+
+        setInfoContact,
         setSelectedContact
      }}>
         { children }
